@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example</title>
+  <script src="./js/angular.js"></script>
+  <script src="./js/angularCont.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<button ng-click="clickMe($event)">Click Me</button>
+<label key="ligang" id="sidebar" ng-model="student.name">{{name}}</label>
+<ul>
+  <li ng-repeat="(key,value) in languages"><span ng-bind="value" key="value"></span></li>
+</ul>
+<test-direct></test-direct>
+
+<div ng-if="isNgIf" style="border:1px solid red">
+myname:<input type="text" ng-model="student.name"><br>
+innername:<input type="text" ng-model="innername">
+<br/>
+<input type="button" value="ngifBtn" ng-click="clickNgifBtn()">
+</div>
+
+<input type="button" value="changeNgIf" ng-click="isNgIf=!isNgIf">
+<br>
+myname:<input type="text" ng-model="student.name">
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SeaJs-example</title>
+
+</head>
+<body>
+
+<button type="button" onclick="seajsmain.greeting('ligang')">Click ME</button>
+
+<script src="lib/sea.js"></script>
+<script>
+
+  seajs.config({
+    paths: {
+      'gallery': 'https://a.alipayobjects.com/gallery'
+    },
+    alias: {
+      'jquery': './lib/jquery-1.12.4.js',
+      'seajsmain':'./js/seajs-main.js',
+	  'seajsutil':'./js/seajs-util.js'
+    }
+  });
+  
+  seajs.use(['seajsmain','seajsutil','jquery'],function(main,util,jquery){
+  debugger;
+ // main.greeting('ligang');
+  window.onload=function()
+  {
+  
+ // greeting('ligang');
+  };
+  
+  });
+
+</script>
+</body>
+</html>
